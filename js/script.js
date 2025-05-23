@@ -13,15 +13,12 @@ window.onload = function () {
 
   // input
   const radius = params.get("radius")
-  console.log(radius)
 
   // process
-  const volume = 4/3 * Math.PI * (radius * radius * radius);
-  const dimension =
-  "<ul>\n<li> radius = " + radius + " mm</li>\n</ul>";
-
+  const volume = (4 / 3) * Math.PI * (radius * radius * radius)
+  const dimension = "<ul>\n<li> radius = " + radius + " mm</li>\n</ul>"
 
   // output
   document.getElementById("dimension").innerHTML = dimension
-  document.getElementById("volume").innerHTML = "volume is: " + volume + " mm³"
+  document.getElementById("volume").innerHTML = "volume is: " + volume.toFixed(3) + " mm³"
 }
